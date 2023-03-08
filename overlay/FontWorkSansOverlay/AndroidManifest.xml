@@ -16,7 +16,7 @@
  */
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.p404.theme.font.googlesans"
+    package="com.p404.theme.font.worksans"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -24,9 +24,9 @@
         android:category="android.theme.customization.font"
         android:priority="1"/>
 
-    <application android:label="@string/font_google-sans_overlay" android:hasCode="false">
+    <application android:label="@string/font_worksans_overlay" android:hasCode="false">
         <meta-data
             android:name="android.theme.customization.REQUIRED_SYSTEM_FONTS"
-            android:value="google-sans,google-sans-medium,google-sans-bold" />
+            android:value="worksans,worksans-medium,worksans-bold" />
     </application>
 </manifest>

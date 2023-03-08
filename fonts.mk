@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020-2022 Project 404
+# Copyright (C) 2020-2023 Project 404
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +14,10 @@
 # limitations under the License.
 #
 
-# 404 Packages
-PRODUCT_PACKAGES += \
-    BlackTheme \
-    P404ThemePickerOverlay \
-    P404ThemesStub \
-    FontGoogleSansOverlay \
-    FontPoppinsOverlay \
-    FontWorkSansOverlay \
-    FontSatoshiOverlay \
-    FontSourceCodeProOverlay
+# Fonts
+LOCAL_PATH := vendor/overlays/404/fonts
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/ttf,$(TARGET_COPY_OUT_PRODUCT)/fonts)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
